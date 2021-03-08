@@ -1,12 +1,43 @@
 <section>
     
+    <article>
+        <h3>Event bind (Observando Eventos!)</h3>
+
+        <button (click)="botaoClicado ()" >Me clique!</button>
+        <br>
+        <br>
+
+        <input type="text" #meuCampo
+        (keyup)="onKeyUp(meuCampo.value)" (keyup.enter)="salvarValor(meuCampo.value)" (blur)="sairDoCampo()"> <!--Preciso colocar um ID, para referenciar ela dentro da função e que seja esse value do ID quem seja enviado para a função lá no TS-->
+        
+        <p>Campo texto: {{ campo_texto }}</p>
+        <p>Valor Salvado: {{ valor_salvo }}</p>
+        <!-- <p>O texto que você estava escrevendo antes de sair é {{ texto_ao_sair }}</p> -->
+
+        <br>
+        <p (mouseover)="passeiMouse ()">Passe o mouse sobre mim!</p>
+        <br>
+
+        <select #nomes (change)="valorSelecionado (nomes.value)">
+            <option value=""></option>
+            <option value="Diego">Diego</option>
+            <option value="Laura">Laura</option>
+            <option value="Elsa">Elsa</option>
+            <option value="Hector">Hector</option>
+        </select>
+        <br>
+        Nome selecionado: {{ nome_selecionado }}
+    </article>
+     
+    
+    
     <!-- Prática de property bindings para CSS -->
 <article>
     <h3>Class e Style Binding</h3>
 
     <p>Selecione uma classe:</p>
 
-    <select #classe_color (change)="0"> <!--ID em agular--> diferente
+    <select #classe_color (change)="0"> <!--ID em agular é como no CSS, aqui o change é zero porque ainda não tinha aprendido event binding--> diferente
         <option value="amarelo">Amarelo</option>
         <option value="azul">Azul</option>
         <option value="vermelho">Vermelho</option>
@@ -45,7 +76,7 @@
         <!-- Property binding -->
         <img [src]=urlImagem [width]=Largura>
 
-        Exemplo com texto
+        <!-- Exemplo com texto -->
         <textarea [value]=ValorTexto [placeholder]=SouUmPlaceholder  ></textarea>
 
     </article>

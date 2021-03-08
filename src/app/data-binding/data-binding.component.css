@@ -1,3 +1,7 @@
+article{
+    background-color: rgb(245, 225, 202);
+}
+
 .amarelo {
     background-color: yellow;
 }
@@ -17,3 +21,11 @@
 .roxo {
     background-color: purple;
 }
+
+
+h3{
+    font-size: 30px;
+    text-decoration: underline;
+    text-align: center;
+}
+

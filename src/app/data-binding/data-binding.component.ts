@@ -22,6 +22,38 @@ export class DataBindingComponent implements OnInit {
   SouUmPlaceholder: string = "Por que vc apagou meu nome?";
   Largura: number = 200;
 
+  //Função para o event binding:
+  botaoClicado () {
+    alert ("AI!, clica muito forte não!!!");
+  }
+
+  //Funções para events bindings de meu campo de texto:
+  campo_texto: string = 'aguardando...';
+  onKeyUp (valor: any){ //É necessario declarar o tipo da função!!!!!
+    this.campo_texto = valor;
+  }
+
+  valor_salvo: string = '';
+  salvarValor (evento_valor: any){
+    this.valor_salvo = evento_valor;
+  }
+
+  //Evento blur
+  // texto_ao_sair: string = "";
+  sairDoCampo (){
+    console.log ("saiu vagabundo, volta lá");
+  }
+
+  //Evento mouseover
+  passeiMouse (){
+    console.log ("Opa!! estou sentindo isso!")
+  }
+
+  //Evento change dentro de un select:
+  nome_selecionado: string= "";
+  valorSelecionado (valor_nome: any){
+    this.nome_selecionado = valor_nome;
+  }
 
   constructor() { }
 
