@@ -1,6 +1,31 @@
 <section>
-    <article>
-        <h3>Interpolação (Bigondinho XD)</h3>
+    
+    <!-- Prática de property bindings para CSS -->
+<article>
+    <h3>Class e Style Binding</h3>
+
+    <p>Selecione uma classe:</p>
+
+    <select #classe_color (change)="0"> <!--ID em agular--> diferente
+        <option value="amarelo">Amarelo</option>
+        <option value="azul">Azul</option>
+        <option value="vermelho">Vermelho</option>
+        <option value="laranja">Laranja</option>
+        <option value="roxo">Roxo</option>
+    </select>
+
+    <p [class]=classe_color.value [style]= "{'font-weight':'bold', 'font-size':'25px'}">A classe selecionada é: {{ classe_color.value }}</p>
+
+    <p [style.display] = "classe_color.value=='vermelho' ? 'block' : 'none'"[style.backgroundColor] = "classe_color.value=='vermelho' ? 'red' : 'white'" >EITA!, VÔCE ESCOLHEU VERMELHO!</p>
+
+</article>
+    
+    
+    
+    
+    
+    <!-- <article>
+        <h3>Interpolação (Bigodinho XD)</h3>
         <p>String realizada com interpolação: {{ url }}</p>
 
         <p>O meu número favorito é {{catorze}}</p>
@@ -9,7 +34,7 @@
 
         <p>Eu sou o número {{ UNO() }}</p>
 
-    </article>
+    </article> -->
 
     <article>
         <h3>Binding de Propiedade</h3>
@@ -20,10 +45,11 @@
         <!-- Property binding -->
         <img [src]=urlImagem [width]=Largura>
 
-        <!-- Exemplo com texto -->
+        Exemplo com texto
         <textarea [value]=ValorTexto [placeholder]=SouUmPlaceholder  ></textarea>
 
     </article>
+
 
 
 </section>
