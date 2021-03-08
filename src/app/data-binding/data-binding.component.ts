@@ -16,6 +16,11 @@ export class DataBindingComponent implements OnInit {
     return 1;
   }
 
+  //Variáveis para fazer property binding:
+  urlImagem: string = "https://picsum.photos/400";
+  ValorTexto: string = "Diego";
+  SouUmPlaceholder: string = "Por que vc apagou meu nome?";
+  Largura: number = 200;
 
 
   constructor() { }
